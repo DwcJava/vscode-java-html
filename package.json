@@ -1,0 +1,70 @@
+{
+  "name": "vscode-java-html",
+  "displayName": "Vscode Java HTML",
+  "description": "Syntax highlighting for HTML & CSS inside of Java Text Blocks.",
+  "version": "0.9.0",
+  "author": "Hyyan Abo Fakher",
+  "publisher": "BASIS Europe Distribution GmbH",
+  "icon": "docs/logo.png",
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "galleryBanner": {
+    "color": "#dedede",
+    "theme": "light"
+  },
+  "repository": {
+    "url": "https://github.com/DwcJava/vscode-java-html"
+  },
+  "bugs": {
+    "url": "https://github.com/DwcJava/vscode-java-html/issues"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "java",
+    "css",
+    "html",
+    "svg",
+    "text blocks",
+    "syntax highlighting"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.java"
+        ],
+        "scopeName": "inline.java-html",
+        "path": "./syntaxes/java-html.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.css": "css",
+          "source.css": "css"
+        }
+      },
+      {
+        "injectTo": [
+          "source.java"
+        ],
+        "scopeName": "inline.java-css",
+        "path": "./syntaxes/java-css.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.css": "css",
+          "source.css": "css"
+        }
+      },
+      {
+        "injectTo": [
+          "source.java"
+        ],
+        "scopeName": "inline.java-html-svg",
+        "path": "./syntaxes/java-html-svg.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.svg": "xml"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+	"fileTypes": [],
+	"injectionSelector": "L:source.java -comment -(string -meta.embedded)",
+  "injections": {
+    "L:source": {
+      "patterns": [
+        {
+          "match": "<",
+          "name": "invalid.illegal.bad-angle-bracket.html"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "begin": "(.?(html))(\"\"\")",
+      "end": "(\"\"\")",
+      "beginCaptures": {
+        "1": {
+          "name": "variable.parameter"
+        }
+      },
+      "patterns": [
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(\\s?\\/?\\*?\\s?(html|inline-html)\\s?\\*?\\/?\\s?)(\"\"\")",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.block"
+        }
+      },
+      "end": "(\"\"\")",
+      "patterns": [
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    },
+    {
+      "begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(html|inline-html)\\s?$)",
+      "beginCaptures": {
+        "1": {
+          "name": "comment.line"
+        }
+      },
+      "end": "(\"\"\")",
+      "patterns": [
+        {
+          "begin": "(\\G)",
+          "end": "(\"\"\")"
+        },
+        {
+          "include": "text.html.basic"
+        }
+      ]
+    }
+  ],
+  "scopeName": "inline.java-html"
+}
