@@ -4,7 +4,7 @@
   "description": "Syntax highlighting for HTML & CSS inside of Java Text Blocks.",
   "version": "0.9.0",
   "author": "Hyyan Abo Fakher",
-  "publisher": "BASIS Europe Distribution GmbH",
+  "publisher": "BEU",
   "icon": "docs/logo.png",
   "engines": {
     "vscode": "^1.19.0"
