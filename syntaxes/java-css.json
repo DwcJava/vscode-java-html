@@ -13,20 +13,6 @@
   },
   "patterns": [
     {
-      "begin": "(.?(css))(\"\"\")",
-      "end": "(\"\"\")",
-      "beginCaptures": {
-        "1": {
-          "name": "variable.parameter"
-        }
-      },
-      "patterns": [
-        {
-          "include": "source.css"
-        }
-      ]
-    },
-    {
       "begin": "(\\s?\\/?\\*?\\s?(css|inline-css)\\s?\\*?\\/?\\s?)(\"\"\")",
       "beginCaptures": {
         "1": {
@@ -35,24 +21,6 @@
       },
       "end": "(\"\"\")",
       "patterns": [
-        {
-          "include": "source.css"
-        }
-      ]
-    },
-    {
-      "begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(css|inline-css)\\s?$)",
-      "beginCaptures": {
-        "1": {
-          "name": "comment.line"
-        }
-      },
-      "end": "(\"\"\")",
-      "patterns": [
-        {
-          "begin": "(\\G)",
-          "end": "(\"\"\")"
-        },
         {
           "include": "source.css"
         }

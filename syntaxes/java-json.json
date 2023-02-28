@@ -1,6 +1,6 @@
 {
-	"fileTypes": [],
-	"injectionSelector": "L:source.java -comment -(string -meta.embedded)",
+  "fileTypes": [],
+  "injectionSelector": "L:source.java -comment -(string -meta.embedded)",
   "injections": {
     "L:source": {
       "patterns": [
@@ -13,7 +13,7 @@
   },
   "patterns": [
     {
-      "begin": "(\\s?\\/?\\*?\\s?(html|inline-html)\\s?\\*?\\/?\\s?)(\"\"\")",
+      "begin": "(\\s?\\/?\\*?\\s?(json|inline-json)\\s?\\*?\\/?\\s?)(\"\"\")",
       "beginCaptures": {
         "1": {
           "name": "comment.block"
@@ -22,10 +22,10 @@
       "end": "(\"\"\")",
       "patterns": [
         {
-          "include": "text.html.basic"
+          "include": "source.json"
         }
       ]
     }
   ],
-  "scopeName": "inline.java-html"
+  "scopeName": "inline.java-json"
 }

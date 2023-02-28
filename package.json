@@ -2,7 +2,7 @@
   "name": "vscode-java-html",
   "displayName": "Vscode Java HTML",
   "description": "Syntax highlighting for HTML & CSS inside of Java Text Blocks.",
-  "version": "0.9.0",
+  "version": "0.12.0",
   "author": "Hyyan Abo Fakher",
   "publisher": "BEU",
   "icon": "docs/logo.png",
@@ -63,6 +63,16 @@
         "path": "./syntaxes/java-html-svg.json",
         "embeddedLanguages": {
           "meta.embedded.block.svg": "xml"
+        }
+      },
+      {
+        "injectTo": [
+          "source.java"
+        ],
+        "scopeName": "inline.java-json",
+        "path": "./syntaxes/java-json.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.json": "json"
         }
       }
     ]

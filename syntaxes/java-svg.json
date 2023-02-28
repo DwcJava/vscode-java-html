@@ -13,20 +13,6 @@
   },
   "patterns": [
     {
-      "begin": "(.?(svg))(\"\"\")",
-      "end": "(\"\"\")",
-      "beginCaptures": {
-        "1": {
-          "name": "variable.parameter"
-        }
-      },
-      "patterns": [
-        {
-          "include": "text.xml"
-        }
-      ]
-    },
-    {
       "begin": "(\\s?\\/?\\*?\\s?(svg|inline-svg)\\s?\\*?\\/?\\s?)(\"\"\")",
       "beginCaptures": {
         "1": {
@@ -35,24 +21,6 @@
       },
       "end": "(\"\"\")",
       "patterns": [
-        {
-          "include": "text.xml"
-        }
-      ]
-    },
-    {
-      "begin": "(?<=\\=|\\:)\\s+(\\/\\/\\s?(svg|inline-svg)\\s?$)",
-      "beginCaptures": {
-        "1": {
-          "name": "comment.line"
-        }
-      },
-      "end": "(\"\"\")",
-      "patterns": [
-        {
-          "begin": "(\\G)",
-          "end": "(\"\"\")"
-        },
         {
           "include": "text.xml"
         }
